@@ -5,7 +5,7 @@ const ducks = [
     breed: 'American Pekin',
     size: 'medium',
     temperament: 'easy',
-    imageUrl: 'https://bit.ly/2xifHNR',
+    imageUrl: 'https://bit.ly/2YnInQm',
     gender: 'female',
     age: 100,
     isRubber: true
@@ -27,7 +27,7 @@ const ducks = [
     breed: 'Khaki Campbell',
     size: 'small',
     temperament: 'normal',
-    imageUrl: 'https://bit.ly/3f2cYsU',
+    imageUrl: 'https://bit.ly/3eYqQV7',
     gender: 'female',
     age: 1023,
     isRubber: true
@@ -49,7 +49,7 @@ const ducks = [
     breed: 'Saxony',
     size: 'medium',
     temperament: 'fabulous',
-    imageUrl: 'https://bit.ly/2xYZFsE',
+    imageUrl: 'https://bit.ly/2YfVenV',
     gender: 'female',
     age: 38,
     isRubber: true
@@ -98,16 +98,18 @@ const showDucks = (duckCollection) => {
   
   for (let i = 0; i < duckCollection.length; i++) {
     const duck = duckCollection[i];
+    const isRubberText = (duckCollection[i].isRubber === true) ? 'I am rubber!' : 'I am not rubber :(';
     domString += `
-    <div class="card col-4 mr-1 mb-1 duck-layout">
+    <div class="card col-3 duck-layout mx-auto">
       <img src="${duck.imageUrl}" class="card-img-top" alt="${duck.name}">
       <div class="card-body">
         <h5 class="card-title">${duck.name}</h5>
-        <p class="card-text">${duck.size} size</p>
-        <p class="card-text">${duck.temperament} temperament</p>
-        <p class="card-text">Gender: ${duck.gender}</p>
-        <p class="card-text">Age: ${duck.age}</p>
-        <p class="card-text">Are you rubber? ${duck.isRubber}</p>
+        <h6 class="card-title">${duck.color}</h6>
+        <p class="card-text flat-left">Size: ${duck.size}</p>
+        <p class="card-text flat-right">Temperament: ${duck.temperament}</p>
+        <p class="card-text flat-left">Gender: ${duck.gender}</p>
+        <p class="card-text flat-right">Age: ${duck.age}</p>
+        <p class="card-text flat-left">${isRubberText}</p>
       </div>
     </div>
   `;
@@ -118,11 +120,43 @@ const showDucks = (duckCollection) => {
   printToDom('#allDucks', domString);
 }
 
+const filterDucksEvent = (event) => {
+  const buttonId = event.target.id;
+  const tempDuckCollection = [];
+  if (buttonId === 'all') {
+    showDucks(ducks);
+    return;
+  } else if (buttonId === 'rubber') {
+    for (let i = 0; i < ducks.length; i++) {
+      if (ducks[i].isRubber === true) {
+        tempDuckCollection.push(ducks[i]);
+      }
+    showDucks(tempDuckCollection);
+    }
+  } 
+  for (let i = 0; i < ducks.length; i++) {
+    if (ducks[i].size === buttonId) {
+      tempDuckCollection.push(ducks[i]);
+    } else if (ducks[i].gender === buttonId) {
+      tempDuckCollection.push(ducks[i]);
+    }
+  showDucks(tempDuckCollection);
+  }
+}
+
+const clickEvents = () => {
+  document.querySelector('#all').addEventListener('click', filterDucksEvent);
+  document.querySelector('#small').addEventListener('click', filterDucksEvent);
+  document.querySelector('#medium').addEventListener('click', filterDucksEvent);
+  document.querySelector('#large').addEventListener('click', filterDucksEvent);
+  document.querySelector('#male').addEventListener('click', filterDucksEvent);
+  document.querySelector('#female').addEventListener('click', filterDucksEvent);
+  document.querySelector('#rubber').addEventListener('click', filterDucksEvent);
+}
+
 const init = () => {
   showDucks(ducks);
+  clickEvents();
 }
 
 init();
-
-// button group for small,medium,large
-// filter on isRubber and gender
