@@ -99,8 +99,8 @@ const showDucks = (duckCollection) => {
   for (let i = 0; i < duckCollection.length; i++) {
     const duck = duckCollection[i];
     domString += `
-    <div class="card col-4 mt-3 duck-layout" style="width: 18rem;">
-      <img src="${duck.imageUrl}" class="card-img-top" alt="...">
+    <div class="card col-4 mr-1 mb-1 duck-layout">
+      <img src="${duck.imageUrl}" class="card-img-top" alt="${duck.name}">
       <div class="card-body">
         <h5 class="card-title">${duck.name}</h5>
         <p class="card-text">${duck.size} size</p>
@@ -113,7 +113,7 @@ const showDucks = (duckCollection) => {
   `;
   }
 
-  domString += `</div>`
+  domString += `</div>`;
 
   printToDom('#allDucks', domString);
 }
