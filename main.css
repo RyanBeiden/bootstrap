@@ -25,16 +25,3 @@ header h2 {
   border: 3px solid #a86e33;
   color: #fff;
 }
-
-.btn-info {
-  background-color: #c27f3c;
-  border-color: #a86e33;
-}
-
-.btn-info:hover {
-  background-color: #a86e33;
-}
-
-.btn-info:focus {
-  background-color: #8b5a29;
-}
