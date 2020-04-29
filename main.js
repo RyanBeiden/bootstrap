@@ -94,22 +94,27 @@ const printToDom = (selector, textToPrint) => {
 }
 
 const showDucks = (duckCollection) => {
-  let domString = '';
+  let domString = '<div class="row">';
+  
   for (let i = 0; i < duckCollection.length; i++) {
+    const duck = duckCollection[i];
     domString += `
-      <div class="duck-layout">
-      <h2>${duckCollection[i].name}</h2>
-      <h3>${duckCollection[i].color}
-      ${duckCollection[i].breed}</h3>
-      <p>- ${duckCollection[i].size} size</p>
-      <p>- ${duckCollection[i].temperament} temperament</p>
-      <img src="${duckCollection[i].imageUrl}">
-      <p>Gender: ${duckCollection[i].gender}</p>
-      <p>Age: ${duckCollection[i].age}</p>
-      <p>Are you rubber? ${duckCollection[i].isRubber}</p>
+    <div class="card col-4 mt-3 duck-layout" style="width: 18rem;">
+      <img src="${duck.imageUrl}" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">${duck.name}</h5>
+        <p class="card-text">${duck.size} size</p>
+        <p class="card-text">${duck.temperament} temperament</p>
+        <p class="card-text">Gender: ${duck.gender}</p>
+        <p class="card-text">Age: ${duck.age}</p>
+        <p class="card-text">Are you rubber? ${duck.isRubber}</p>
       </div>
-    `
+    </div>
+  `;
   }
+
+  domString += `</div>`
+
   printToDom('#allDucks', domString);
 }
 
@@ -118,3 +123,6 @@ const init = () => {
 }
 
 init();
+
+// button group for small,medium,large
+// filter on isRubber and gender

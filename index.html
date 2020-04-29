@@ -4,12 +4,38 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Bootstrap!</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
   <link rel="stylesheet" href="main.css">
 </head>
 <body>
-  <h1>Bootstrap</h1>
 
-  <div id="allDucks"></div>
+  <header class="container mt-3 mb-3">
+    <h1>Bootstrap</h1>
+    <h2>Ducks!</h2>
+  </header>
+
+  <div class="container mt-4" style="width: 400px;">
+    <div class="row">
+      <div class="btn-group col" role="group" aria-label="Basic example">
+        <button type="button" class="btn btn-secondary">Small</button>
+        <button type="button" class="btn btn-secondary">Medium</button>
+        <button type="button" class="btn btn-secondary">Large</button>
+      </div>
+    </div>
+    <div class="row mt-4 mb-4">
+      <div class="col">
+        <button type="button" class="btn btn-info">Male</button>
+      </div>
+      <div class="col">
+        <button type="button" class="btn btn-info">Female</button>
+      </div>
+      <div class="col">
+        <button type="button" class="btn btn-info">Rubber</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="allDucks" class="container"></div>
 
   <script src="main.js"></script>
 </body>
