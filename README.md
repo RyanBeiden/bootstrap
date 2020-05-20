@@ -6,8 +6,6 @@ This site was built using many Bootstrap features. You will see button groups, c
 
 ![Bootstrap Duck Site Demo](bootstrap-duck-site-demo.gif)
 
----
-
 ## Full View
 - Clone the repository 👉🏼`$ git clone https://github.com/RyanBeiden/bootstrap.git`
 
