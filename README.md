@@ -9,12 +9,12 @@ This site was built using many Bootstrap features. You will see button groups, c
 ---
 
 ## Installation
-- Clone Repo locally 👉🏼`$ git clone https://github.com/RyanBeiden/bootstrap.git`
+- Clone the repository 👉🏼`$ git clone https://github.com/RyanBeiden/bootstrap.git`
 
-- Run a server to view project 👉🏼 `$ hs`
+- Run a server to view project `$ hs` 👀
 
 ## Technologies Used
-Bootstrap | DOM | Event Listeners
+![Bootstrap](https://img.shields.io/badge/-Bootstrap-brightgreen) ![DOM](https://img.shields.io/badge/-DOM-yellow) ![Event Listeners](https://img.shields.io/badge/-Event%20Listeners-red)
 
 #### Backlog/Roadmap
 
