@@ -14,7 +14,7 @@ This site was built using many Bootstrap features. You will see button groups, c
 - Run a server to view project `$ hs` 👀
 
 ## Technologies Used
-![Bootstrap](https://img.shields.io/badge/-Bootstrap-brightgreen) ![DOM](https://img.shields.io/badge/-DOM-yellow) ![Event Listeners](https://img.shields.io/badge/-Event%20Listeners-red)
+![Bootstrap](https://img.shields.io/badge/-Bootstrap-brightgreen) ![DOM](https://img.shields.io/badge/-DOM-yellow) ![Event Listeners](https://img.shields.io/badge/-Event%20Listeners-blue)
 
 #### Backlog/Roadmap
 
