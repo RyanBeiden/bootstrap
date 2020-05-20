@@ -8,7 +8,7 @@ This site was built using many Bootstrap features. You will see button groups, c
 
 ---
 
-## Installation
+## Full View
 - Clone the repository 👉🏼`$ git clone https://github.com/RyanBeiden/bootstrap.git`
 
 - Run a server to view project `$ hs` 👀
