@@ -9,6 +9,8 @@ This site was built using many Bootstrap features. You will see button groups, c
 
 ![Bootstrap Duck Site Demo](bootstrap-duck-site-demo.gif)
 
+---
+
 #### Backlog
 
 Build a feature that allows the User to have multiple filters used at once. For example, display all "Medium" "Female" ducks.
