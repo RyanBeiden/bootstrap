@@ -6,10 +6,10 @@ This site was built using many Bootstrap features. You will see button groups, c
 
 ![Bootstrap Duck Site Demo](bootstrap-duck-site-demo.gif)
 
-## Full View
+## View Project
 - Clone the repository 👉🏼`$ git clone https://github.com/RyanBeiden/bootstrap.git`
 
-- Run any http server `$ hs` to view project 👀
+- Run any http server `$ hs` or code editor to view project 👀
 
 ## Technologies Used
 ![Bootstrap](https://img.shields.io/badge/-Bootstrap-2c9fcc?style=flat-square) ![DOM](https://img.shields.io/badge/-DOM-2c9fcc?style=flat-square) ![Event Listeners](https://img.shields.io/badge/-Event%20Listeners-2c9fcc?style=flat-square)
